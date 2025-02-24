@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+
+    <title>Hello world!</title>
+    
+    <!-- import Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Lilita+One&display=swap" rel="stylesheet">
+
+    <!-- import the webpage's stylesheets -->
+    <link rel="stylesheet" href="/style.css" />
+     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+
+    <!-- import javascript files -->
+     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js">
+    </script>
+      <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns" defer></script>
+
+  </head>
+  <body>
+    <!-- this is the start of content -->
+    <div class = "container">
+      <header>
+      <h1>
+        Prince George's County Litter Dashboard
+      </h1></header>
+      <div class="content">
+        <div class="flex">
+          <div class="mapLeft">
+            <h2>
+            Litter Pickup Locations
+          </h2>
+            <div id="map"></div>
+          </div>
+          <div class="wrapper right lineContainer">
+            <canvas id="line"></canvas>
+          </div>
+        </div>
+        <div class="flex">
+          <div class="left">
+            <canvas id = "barChart"></canvas>
+          </div>
+          <div class="right">
+            <canvas id="doughnut"></canvas>
+          </div>
+        </div>
+      </div>
+      <footer>The data comes from the LitterTRAK dataset hosted online by Prince George's County. Residents, community organizations, and residents report trash collected during cleanup events through the PGCLitterTRAK app.</footer>
+    </div>
+    <!-- import the javascript after everything has loaded -->
+    <script src="/script.js"></script>
+  </body>
+</html>
